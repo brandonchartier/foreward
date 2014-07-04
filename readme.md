@@ -5,7 +5,7 @@ Foreward is a Lua library of functional programming helpers, inspired by LiveScr
 ## Lists
 
 ### len (length) (count)
-Returns length of the list or string.
+Returns `length` of the list or string.
 
     len({1, 2, 3})
     => 3
