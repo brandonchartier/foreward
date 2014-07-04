@@ -1,6 +1,6 @@
 # Foreward
 
-Foreward is a Lua library of functional programming helpers, inspired by LiveScript, Haskell and Clojure.
+Foreward is a Lua library of functional programming helpers, inspired by LiveScript, Haskell and Clojure. Most descriptions come from Prelude.ls or Underscore.js.
 
 ## Lists
 
