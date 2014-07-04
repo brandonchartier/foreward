@@ -49,7 +49,7 @@ Returns a new list composed of the items which pass the supplied function's test
     => {2}
 
 ### reject
-Like filter, but the new list is composed of all the items which fail the function's test.
+Like `filter`, but the new list is composed of all the items which fail the function's test.
 
     reject(function(x) return even(x) end, {1, 2, 3})
     => {1, 3}
@@ -85,7 +85,7 @@ Flattens a list which contains sub lists and elements of arbitrary depth into a 
     => {1, 2, 3, 4, 5}
 
 ### slice
-Returns a slice of a list.
+Returns a section of a list.
 
     slice(2, 4, {1, 2, 3, 4, 5})
     => {3, 4}
@@ -103,13 +103,13 @@ A function to create flexibly-numbered lists of integers, handy for each and map
     => {1, 2, 3, 4, 5}
 
 ### head (first)
-The first item of the list. Returns nil if the list is empty.
+The first item of the list. Returns `nil` if the list is empty.
 
     head({1, 2, 3, 4, 5})
     => 1
 
 ### last
-The last item of the list. Returns nil if the list is empty.
+The last item of the list. Returns `nil` if the list is empty.
 
     last({1, 2, 3, 4, 5})
     => 5
@@ -145,7 +145,7 @@ Returns a new list which contains each value of the inputted list only once.
     => {1, 3, 2}
 
 ### part (partition)
-Equivalent to {filter(f, xs), reject(f, xs)}, but more efficient, using only one loop.
+Equivalent to `{filter(f, xs), reject(f, xs)}`, but more efficient, using only one loop.
 
     part(function(x) return even(x) end, {1, 2, 3, 4, 5})
     => {{2, 4}, {1, 3, 5}}
@@ -169,37 +169,37 @@ Produces a new list containing all the items which are present in all the lists.
     => {1, 2}
 
 ### diff (difference)
-Returns a new list containing the elements which are present in the first list and not in the others. This function is not curried as it takes a variable number of arguments.
+Returns a new list containing the elements which are present in the first list and not in the others.
 
     diff({1, 2, 3}, {1})
     => {2, 3}
 
 ### take
-Returns the first n items in the list.
+Returns the first `n` items in the list.
 
     take(2, {1, 2, 3, 4, 5})
     => {1, 2}
 
 ### drop
-Returns the result of dropping the first n items of the list.
+Returns the result of dropping the first `n` items of the list.
 
     drop(2, {1, 2, 3, 4, 5})
     => {3, 4, 5}
 
 ### at (nth)
-Gets the element at the nth index (the first argument). If negative, will work from the end.
+Gets the element at the `nth` index (the first argument). If negative, will work from the end.
 
     nth(2, {1, 2, 3, 4, 5})
     => 2
 
 ### index
-Returns the index at which value can be found in the array, or nil if value is not present in the array.
+Returns the index at which value can be found in the array, or `nil` if value is not present in the array.
 
     index(2, {1, 2, 3, 4, 5})
     => 2
 
 ### find
-Returns the first item in list to pass the function's test. Returns nil if all items fail the test.
+Returns the first item in list to pass the function's test. Returns `nil` if all items fail the test.
 
     find(odd, {2, 3, 4 ,5})
     => 3
@@ -211,7 +211,7 @@ Returns a shuffled list.
     => {2, 4, 1, 3}
 
 ### sample
-Produce a random sample from the list. Pass a number to return n random elements from the list. Otherwise a single random item will be returned.
+Produce a random sample from the list. Pass a number to return `n` random elements from the list. Otherwise a single random item will be returned.
 
     sample({1, 2, 3, 4, 5})
     => 4
@@ -231,19 +231,19 @@ Takes a list of comparable items, and returns the largest of them.
     => 9
 
 ### has (contains)
-Returns true if the value is present in the list.
+Returns `true` if the value is present in the list.
 
     has(3, {1, 2, 3, 4, 5})
     => true
 
 ### all (every)
-Returns true if all the items in the list are true when applied to the test.
+Returns `true` if all the items in the list are true when applied to the test.
 
     all(odd, {1, 2, 3, 4, 5})
     => false
 
 ### any (some)
-Returns true if any of the items in the list are true when applied to the test.
+Returns `true` if any of the items in the list are true when applied to the test.
 
     any(odd, {1, 2, 3, 4, 5})
     => true
@@ -258,13 +258,13 @@ Whether the list is empty.
 ## Numbers
 
 ### dec
-Returns value minus 1.
+Returns `value` minus 1.
 
     dec(10)
     => 9
 
 ### inc
-Returns value plus 1.
+Returns `value` plus 1.
 
     inc(10)
     => 11
@@ -282,7 +282,7 @@ Division truncated toward 0.
     => -6
 
 ### rem
-Remainder, like the % operator.
+Remainder, like the `%` operator.
 
     rem(-20, 3)
     => -2
