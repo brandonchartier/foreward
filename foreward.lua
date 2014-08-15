@@ -400,40 +400,64 @@ function lcm(x, y)
 end
 
 
--- Strings
-function split(sep, str)
-end
-
-function join(sep, xs)
-  return table.concat(xs, sep)
-end
-
-function lines(str)
-end
-
-function unlines(xs)
-  return table.concat(xs, "\n")
-end
-
-function words(str)
-end
-
-function unwords(xs)
-  return table.concat(xs, " ")
-end
-
-function chars(str)
-end
-
-function unchars(xs)
-  return table.concat(xs, "")
-end
-
-function capitalize(str)
-  return string.gsub(str, "^%l", string.upper)
-end
-
-
 -- Functions
 function apply(f, xs)
 end
+
+
+return {
+  len = len,
+  cat = cat,
+  conj = conj,
+  each = each,
+  map = map,
+  compact = compact,
+  filter = filter,
+  reject = reject,
+  fold = fold,
+  sum = sum,
+  prod = prod,
+  mean = mean,
+  flat = flat,
+  slice = slice,
+  zip = zip,
+  range = range,
+  head = head,
+  last = last,
+  init = init,
+  tail = tail,
+  rev = rev,
+  sort = sort,
+  uniq = uniq,
+  part = part,
+  without = without,
+  union = union,
+  same = same,
+  diff = diff,
+  take = take,
+  drop = drop,
+  nth = nth,
+  index = index,
+  find = find,
+  shuffle = shuffle,
+  sample = sample,
+  least = least,
+  most = most,
+  has = has,
+  all = all,
+  any = any,
+  empty = empty,
+  dec = dec,
+  inc = inc,
+  neg = neg,
+  quot = quot,
+  rem = rem,
+  div = div,
+  mod = mod,
+  even = even,
+  odd = odd,
+  gcd = gcd,
+  lcm = lcm,
+  split = split,
+  apply = apply
+}
